@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if request.user.is_customer %}
+<section>
+    <div class="container mt-5">
+        <h1 class="display-5 fw-bold"> Customer Dashboard</h1>
+        <h2>Welcome to the Online Ticket System</h2>
+        <p>This is the main content of your page. You can add your specific content here.</p>
+
+        <!-- Add more content as needed -->
+
+    </div>
+</section>
+
+{% elif request.user.is_engineer %}
+<section>
+    <div class="container mt-5">
+        <h1 class="display-5 fw-bold"> Engineer Dashboard</h1>
+        <h2>Welcome to the Online Ticket System</h2>
+        <p>This is the main content of your page. You can add your specific content here.</p>
+
+        <!-- Add more content as needed -->
+
+    </div>
+</section>
+{% endif %}
+{% endblock content %}
